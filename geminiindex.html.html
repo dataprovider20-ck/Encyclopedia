@@ -1,0 +1,92 @@
+<!DOCTYPE1 html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>प्रखंड ज्ञानी श्री श्री 1008 आचार्य श्री चंद्रकार शुक्ला जी महाराज - ज्ञान एवं सूचना पोर्टल</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', 'Tiro Devanagari Hindi', serif, sans-serif;
+        }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #451a03 100%);
+        }
+    </style>
+</head>
+<body class="bg-amber-50/30 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-amber-700 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-sm flex justify-between items-center px-6">
+        <div class="hidden sm:flex items-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
+            <span>ज्ञानम् परमम् ध्येयम्</span>
+        </div>
+        <div class="mx-auto sm:mx-0 font-semibold tracking-wide">
+            🚩 प्रखंड ज्ञानी श्री श्री 1008 आचार्य श्री चंद्रकार शुक्ला जी महाराज द्वारा प्रकाशित 🚩
+        </div>
+        <div class="hidden md:flex items-center gap-4 text-xs">
+            <span id="current-date"></span>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md sticky top-0 z-40 border-b border-amber-200/50 dark:border-slate-800 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- BRANDING / LOGO -->
+                <div class="flex items-center gap-3 cursor-pointer" onclick="showSection('all')">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-600 via-orange-500 to-amber-400 flex items-center justify-center text-white shadow-lg shadow-amber-500/20 ring-2 ring-amber-400">
+                        <i data-lucide="book-open-check" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-lg sm:text-xl font-bold bg-gradient-to-r from-amber-800 via-orange-700 to-amber-900 dark:from-amber-400 dark:to-orange-300 bg-clip-text text-transparent leading-tight">
+                            ज्ञान एवं विचार दर्शन
+                        </h1>
+                        <p class="text-[10px] sm:text-xs text-amber-700 dark:text-amber-400 font-semibold tracking-tight">
+                            संस्थापक: श्री श्री 1008 आचार्य चंद्रकार शुक्ला जी
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SEARCH & UTILITIES -->
+                <div class="flex items-center gap-3">
+                    <!-- SEARCH BAR -->
+                    <div class="relative hidden md:block w-64">
+                        <input type="text" id="search-input" onkeyup="filterArticles()" placeholder="खोजें (Search)..." class="w-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-100 text-sm rounded-full pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500 border border-slate-200 dark:border-slate-700 transition">
+                        <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-2.5 text-slate-400"></i>
+                    </div>
+
+                    <!-- DARK MODE TOGGLE -->
+                    <button onclick="toggleDarkMode()" class="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-amber-400 transition" title="थीम बदलें">
+                        <i data-lucide="moon" id="theme-icon-moon" class="w-5 h-5"></i>
+                        <i data-lucide="sun" id="theme-icon-sun" class="w-5 h-5 hidden"></i>
+                    </button>
+
+                    <!-- MOBILE MENU BTN -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 19 HEADERS NAVIGATION BAR (DESKTOP & SCROLLABLE) -->
+        <nav class="bg-amber-900 text-amber-100 border-t border-amber-800 shadow-inner">
+            <div class="max-w-7xl mx-auto px-2">
+                <div class="flex items-center space-x-1 overflow-x-auto no-scrollbar py-2 text-
